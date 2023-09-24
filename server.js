@@ -4,11 +4,11 @@ const port = 3000;
 
 // This line use exoress engine to process the webpage, 
 //  if you put 'pulbic' it will look for public folder to get index.html
-app.use(express.static('public'));
+app.use(express.static('views'));
 
 // Set up a route to serve the index.html file
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + '/views/index.html');
 });
 
 app.listen(port, () => {
